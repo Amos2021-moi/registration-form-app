@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h1>ArmourTech Dashboard</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="welcome-card">
+      <h2>Welcome, <span id="user-name">User</span>!</h2>
+      <p>Your registered email: <span id="user-email">user@example.com</span></p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Profile</h3>
+        <p>Update your information</p>
+      </div>
+      <div class="card">
+        <h3>Settings</h3>
+        <p>Manage your preferences</p>
+      </div>
+      <div class="card">
+        <h3>Messages</h3>
+        <p>Check your inbox</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 ArmourTech</p>
+  </footer>
+
+  <script>
+    // Example: dynamically fill username/email from query params
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name') || 'User';
+    const email = urlParams.get('email') || 'user@example.com';
+
+    document.getElementById('user-name').textContent = name;
+    document.getElementById('user-email').textContent = email;
+  </script>
+</body>
+</html>
