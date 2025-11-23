@@ -14,12 +14,18 @@ body {
   background: linear-gradient(135deg, #f093fb, #f5576c);
 }
 
+.form-container {
+  width: 350px;
+  padding-top: 50px;
+}
+
 form {
   background-color: #ffffffdd; /* semi-transparent white */
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  width: 350px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
 }
 
 h1 {
@@ -63,4 +69,20 @@ button {
 
 button:hover {
   background: #f093fb;
+}
+
+p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+a {
+  color: #f5576c;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #f093fb;
 }

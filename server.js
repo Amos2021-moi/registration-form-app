@@ -21,3 +21,9 @@ app.post('/register', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
+
+app.post('/login', (req, res) => {
+  const { email, password } = req.body;
+  console.log(`Login attempt - Email: ${email}, Password: ${password}`);
+  res.send(`<h2>Welcome back!</h2><p>Email: ${email}</p>`);
+});
